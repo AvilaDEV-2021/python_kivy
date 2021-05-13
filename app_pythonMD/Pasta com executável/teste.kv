@@ -1,0 +1,297 @@
+<Telas>:
+    Menu:
+        name: 'menu'
+    Op1:
+        name: 'op1'
+
+    Op2:
+        name: 'op2'
+
+    Op3:
+        name: 'op3'
+
+    Op4:
+        name: 'op4'
+
+    Op5:
+        name: 'op5'
+
+    Final:
+        name: 'final'
+
+<Menu>:
+    BoxLayout:
+        orientation:'vertical'
+        canvas:
+            Color:
+                rgba:1,1,1,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        Image:
+            source: 'pc.jpg'
+            allow_stretch:True
+            keep_ratio:False
+        Label:
+            text:'MONTE O SEU PC GAMER !'
+            font_size:40
+            bold:True
+            color:(0,0,0,1)
+        Button:
+            text:'Clique para continuar'
+            size_hint_y:None
+            font_size:20
+            bold:True
+            on_release:app.root.current = 'op1'
+            background_color: (0,1,0,1)
+
+
+
+<Op1>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+        Image:
+            source: 'motherboard.jpg'
+            size_hint_y:None
+            height:500
+            allow_stretch:True
+    Label:
+        text:'Placa Mãe'
+        pos_hint: {'center': (0.5, 0.85)}
+        font_size:30
+        bold:True
+
+    Button:
+        text:'Próximo'
+        font_size:20
+        size_hint:0.5,0.5
+        pos_hint:{'center_x':0.75}
+        size_hint_y:None
+        bold:True
+        background_color: (0,1,0,1)
+        on_release:app.root.current = 'op2'
+    Button:
+        text:'Voltar'
+        size_hint:0.5,0.5
+        size_hint_y:None
+        font_size:20
+        bold:True
+        background_color: (1,0,0,1)
+        on_release:app.root.current = 'menu'
+    Spinner:
+        id:a
+        size_hint: None, None
+        size: 200, 40
+        pos_hint: {'center': (0.9, 0.6)}
+        text: 'Escolha'
+        bold:True
+        background_color: (0,1,1,1)
+        values: ['Asus R$650', 'Gigabyte R$500', 'ASRock R$480']
+        on_text: print(f'{self.text}')
+
+
+
+
+<Op2>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+    Image:
+        source:'ia.jpg'
+        size_hint_y:None
+        height:500
+        allow_stretch:True
+    Label:
+        text:'Processador'
+        font_size:30
+        bold:True
+        pos_hint: {'center': (0.5, 0.85)}
+
+    Button:
+        text:'Próximo'
+        font_size:20
+        size_hint:0.5,0.5
+        pos_hint:{'center_x':0.75}
+        size_hint_y:None
+        bold:True
+        background_color: (0,1,0,1)
+        on_release:app.root.current = 'op3'
+    Button:
+        text:'Voltar'
+        size_hint:0.5,0.5
+        size_hint_y:None
+        font_size:20
+        background_color: (1,0,0,1)
+        on_release:app.root.current = 'op1'
+    Spinner:
+        id: b
+        size_hint: None, None
+        size: 200, 40
+        pos_hint: {'center': (0.9, 0.6)}
+        text: 'Escolha'
+        bold:True
+        background_color: (0,1,1,1)
+        values: 'Intel R$890', 'AMD R$ 800'
+        on_text: print(f'{self.text}')
+
+<Op3>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+    Image:
+        source:'video.jpg'
+        size_hint_y:None
+        height:500
+        allow_stretch:True
+    Label:
+        text:'Placa de Vídeo'
+        font_size:30
+        bold:True
+        pos_hint: {'center': (0.5, 0.85)}
+
+    Button:
+        text:'Próximo'
+        font_size:20
+        size_hint:0.5,0.5
+        pos_hint:{'center_x':0.75}
+        background_color: (0,1,0,1)
+        bold:True
+        size_hint_y:None
+        on_release:app.root.current = 'op4'
+
+    Button:
+        text:'Voltar'
+        size_hint:0.5,0.5
+        size_hint_y:None
+        font_size:20
+        bold:True
+        background_color: (1,0,0,1)
+        on_release:app.root.current = 'op2'
+    Spinner:
+        id: c
+        size_hint: None, None
+        size: 200, 40
+        pos_hint: {'center': (0.9, 0.6)}
+        text: 'Escolha'
+        bold:True
+        background_color: (0,1,1,1)
+        values: 'RTX 3060 R$3.000', 'RX 5600 XT R$3.500'
+        on_text: print(f'{self.text}')
+
+<Op4>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+    Image:
+        source:'gabinete.jpg'
+    Label:
+        text:'Gabinete'
+        font_size:30
+        bold:True
+        pos_hint: {'center': (0.5, 0.85)}
+
+    Button:
+        text:'Próximo'
+        font_size:20
+        size_hint:0.5,0.5
+        pos_hint:{'center_x':0.75}
+        size_hint_y:None
+        bold:True
+        background_color: (0,1,0,1)
+        on_release:app.root.current = 'op5'
+
+    Button:
+        text:'Voltar'
+        size_hint:0.5,0.5
+        size_hint_y:None
+        font_size:20
+        bold:True
+        background_color: (1,0,0,1)
+        on_release:app.root.current = 'op3'
+    Spinner:
+        id: d
+        size_hint: None, None
+        size: 200, 40
+        pos_hint: {'center': (0.9, 0.6)}
+        text: 'Escolha'
+        bold:True
+        background_color: (0,1,1,1)
+        values: 'FullTower RGB R$650', 'MidTower RGB R$350'
+        on_text: print(f'{self.text}')
+
+
+<Op5>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+    Image:
+        source:'monitor.jpg'
+        size_hint_y:None
+        height:500
+        allow_stretch:True
+    Label:
+        text:'Monitor'
+        font_size:30
+        bold:True
+        pos_hint: {'center': (0.5, 0.85)}
+
+    Button:
+        text:'FINALIZAR COMPRA!'
+        font_size:20
+        size_hint:0.5,0.5
+        pos_hint:{'center_x':0.75}
+        size_hint_y:None
+        bold:True
+        background_color: (0,1,0,1)
+        on_release:app.root.current = 'final'
+
+    Button:
+        text:'Voltar'
+        size_hint:0.5,0.5
+        size_hint_y:None
+        font_size:20
+        bold:True
+        background_color: (1,0,0,1)
+        on_release:app.root.current = 'op4'
+    Spinner:
+        id: e
+        size_hint: None, None
+        size: 200, 40
+        pos_hint: {'center': (0.9, 0.6)}
+        text: 'Escolha'
+        bold:True
+        background_color: (0,1,1,1)
+        values: 'FULL HD" 22 R$800 ', 'HD 17" R$480', 'Ultrawide 29" R$1200'
+        on_text: print(f'{self.text}')
+
+<Final>:
+    BoxLayout:
+        orientation:'vertical'
+        padding:50
+        spacing:20
+    Image:
+        source:'final.jpg'
+    Label:
+        text:'Parabéns pela compra do seu novo PC!'
+        pos_hint: {'center': (0.5, 0.5)}
+        font_size:25
+        bold:True
+
+    #Label:
+        #text:'O valor final foi de : '
+        #pos_hint: {'center': (0.5, 0.3)}
+        #font_size:25
+
+    Button:
+        text:'FECHAR'
+        size_hint_y:None
+        font_size:20
+        bold:True
+        background_color: (1,0,0,1)
+        on_release:app.stop()

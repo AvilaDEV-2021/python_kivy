@@ -1,0 +1,2 @@
+****Infelizmente não consegui implementar a soma dos produtos na tela final de acordo com as escolhas dos Spinners, somente 
+em forma de texto ao selecionar e mostrar no cmd***
