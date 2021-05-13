@@ -1,5 +1,5 @@
 # python_kivy
-Aplicação simples usando Python e a framework Kivy
+Criação de uma aplicação simples usando Python e a framework Kivy para o processo seletivo de estagiário para a Mercadata Digital (30.03.2021)
 
 Dois arquivos necessários : Um na extensão .py (Python) e outro na extensão .kv (Kivy)
 
